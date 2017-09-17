@@ -1,0 +1,5 @@
+f(1) = A
+f(2) = B
+f(3) = C
+Input  = { 1,2,3 } 
+Output = { A,B,C }
