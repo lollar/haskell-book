@@ -22,3 +22,7 @@ The word expression refers to a super set of all those things.
 An abstraction is a function consisting of two parts: the head, and the body.
 The head contains the lambda and a variable. The body is the expression returns when applied.
 ### 1.5 Beta reduction
+When applying a function to an argument:
+  - substite the input expression for all instances of bound variables within the body of the abstraction
+  - eliminate the head of the abstraction
+
