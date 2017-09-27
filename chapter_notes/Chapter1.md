@@ -73,3 +73,23 @@ $z.($m.$n.m)(z)(($p.p)z) --| We applied the y and replaced the single occurnce o
 $z.($n.z)(($p.p)z) --| Apply lambda binding m to the argument z. 
 $z.z
 ```
+#### Equivalence Exercise Answers:
+1. B
+2. C
+3. B
+
+### 1.7 Evaluation is simplification
+- Normal form refers to `beta normal form`
+  -  Beta normal form is when you cannot reduce terms any further
+
+#### 1.8 Combinators
+- A combinator is a lambda term with no free variables
+- Server only to `combine` the arguments they are given
+- The following are examples of combinators because every term in the body occurs in the head:
+1. `$x.x` --| x is the only varable and is bound because it iis bound by enclosing the lambda
+2. `$xy.x`
+3. `$xyz.xz(yz)`
+- The follwoing are not because there's one or more free variables:
+1. `$y.x` --| Here y is bound but x is free
+2. `$x.xz` --| z is free
+
