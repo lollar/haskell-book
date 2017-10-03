@@ -82,7 +82,7 @@ $z.z
 - Normal form refers to `beta normal form`
   -  Beta normal form is when you cannot reduce terms any further
 
-#### 1.8 Combinators
+### 1.8 Combinators
 - A combinator is a lambda term with no free variables
 - Server only to `combine` the arguments they are given
 - The following are examples of combinators because every term in the body occurs in the head:
@@ -92,4 +92,22 @@ $z.z
 - The follwoing are not because there's one or more free variables:
 1. `$y.x` --| Here y is bound but x is free
 2. `$x.xz` --| z is free
+
+### 1.9 Divergence
+
+Not all reducible lambda terms to a beta normal form, sometimes they diverge.
+
+Divergence means that the reduction process never ends.
+
+#### Omega that diverges
+1. ($x.xx)($x.xx)
+x in the first lambda's head becomes the second lambda.
+
+2. ([x := ($x.xx)|xx)
+Using [var := expr] to denote what x has been bad to.
+
+3. ($x.xx)($x.xx)
+Substituting ($x.xx) for each occurence of x. We're back to where we started and this reduction process never ends - we can say omega diverges.
+
+This matters because terms that diverge don't produce an answer or meaningful result.
 
